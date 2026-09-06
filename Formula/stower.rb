@@ -5,23 +5,23 @@
 class Stower < Formula
   desc "Terminal UI for managing a dotfiles repository with GNU Stow"
   homepage "https://github.com/horbo/stower"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   depends_on "stow"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/horbo/stower/releases/download/v0.1.1/stower_0.1.1_darwin_amd64.tar.gz"
-      sha256 "56181bbbb3dc1cabdce726a5aa2730fccfff8513789598a1b2738e690ca0215f"
+      url "https://github.com/horbo/stower/releases/download/v0.2.0/stower_0.2.0_darwin_amd64.tar.gz"
+      sha256 "ab3e803e5735aa47b5da0eb1060cbcf605ec77f2e76587cc6327357605749c77"
 
       define_method(:install) do
         bin.install "stower"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/horbo/stower/releases/download/v0.1.1/stower_0.1.1_darwin_arm64.tar.gz"
-      sha256 "fb92c4b3b5da8f3f12063b489fbd2331defa57b69fe4ac0a73e3101ab2bbb2a2"
+      url "https://github.com/horbo/stower/releases/download/v0.2.0/stower_0.2.0_darwin_arm64.tar.gz"
+      sha256 "f05ce96498232e360c8d7dadf95fd996a7338408c0f77e1628193759fb665b79"
 
       define_method(:install) do
         bin.install "stower"
@@ -31,15 +31,15 @@ class Stower < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/horbo/stower/releases/download/v0.1.1/stower_0.1.1_linux_amd64.tar.gz"
-      sha256 "d728304ec836f02d914915a808fa513e4efd13556ecd5b09cbd97835089914c7"
+      url "https://github.com/horbo/stower/releases/download/v0.2.0/stower_0.2.0_linux_amd64.tar.gz"
+      sha256 "ba4b16a3779bcfe5aa317654aee85e298e6ec18d213eb3d5e5b380f84f8fde1f"
       define_method(:install) do
         bin.install "stower"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/horbo/stower/releases/download/v0.1.1/stower_0.1.1_linux_arm64.tar.gz"
-      sha256 "d173659557b80d708983cf12cd58ca03d969403cbebb48ebaae831ad74316593"
+      url "https://github.com/horbo/stower/releases/download/v0.2.0/stower_0.2.0_linux_arm64.tar.gz"
+      sha256 "a2a2a8952173d9d5e6ed030379cfa850f0bad8c623a77bab4ade355ad3326db8"
       define_method(:install) do
         bin.install "stower"
       end
